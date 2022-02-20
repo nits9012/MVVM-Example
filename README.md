@@ -28,3 +28,5 @@ Respose :
 {"id":3422,"name":"Daiwik Devar","email":"daiwik_devar@larson.co","gender":"male","status":"inactive"},
 {"id":3421,"name":"Bhanumati Mishra","email":"mishra_bhanumati@kerluke.info","gender":"male","status":"active"}]
 ```
+
+<img src="mvvm_output.png" width="450" height="750">
