@@ -30,4 +30,4 @@ Respose :
 ```
 
 
-<img src="mvvm_output.png" width="350" height="550">
+<img src="mvvm_output.png" width="350" height="600">
