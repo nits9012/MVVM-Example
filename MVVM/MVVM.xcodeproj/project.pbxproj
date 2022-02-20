@@ -10,6 +10,7 @@
 		263C278527B966D600624F00 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C278427B966D600624F00 /* UserViewController.swift */; };
 		263C278827B96A2200624F00 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C278727B96A2200624F00 /* UserCellViewModel.swift */; };
 		263C278B27B96A2E00624F00 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C278A27B96A2E00624F00 /* UserViewModel.swift */; };
+		263C279027C2626A00624F00 /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C278F27C2626A00624F00 /* UsersCell.swift */; };
 		2679159827B6A405002D1D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2679159727B6A405002D1D22 /* AppDelegate.swift */; };
 		2679159A27B6A405002D1D22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2679159927B6A405002D1D22 /* SceneDelegate.swift */; };
 		2679159F27B6A405002D1D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2679159D27B6A405002D1D22 /* Main.storyboard */; };
@@ -20,13 +21,13 @@
 		267915B927B6ABF8002D1D22 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267915B827B6ABF8002D1D22 /* Users.swift */; };
 		267915BC27B81B4B002D1D22 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267915BB27B81B4B002D1D22 /* UserService.swift */; };
 		267915BF27B81DEA002D1D22 /* UsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267915BE27B81DEA002D1D22 /* UsersCell.xib */; };
-		267915C227B81DFB002D1D22 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267915C127B81DFB002D1D22 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		263C278427B966D600624F00 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		263C278727B96A2200624F00 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		263C278A27B96A2E00624F00 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		263C278F27C2626A00624F00 /* UsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
 		2679159427B6A405002D1D22 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2679159727B6A405002D1D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2679159927B6A405002D1D22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		267915B827B6ABF8002D1D22 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		267915BB27B81B4B002D1D22 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		267915BE27B81DEA002D1D22 /* UsersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersCell.xib; sourceTree = "<group>"; };
-		267915C127B81DFB002D1D22 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				267915BE27B81DEA002D1D22 /* UsersCell.xib */,
-				267915C127B81DFB002D1D22 /* UserCell.swift */,
+				263C278F27C2626A00624F00 /* UsersCell.swift */,
 				263C278427B966D600624F00 /* UserViewController.swift */,
 			);
 			path = View;
@@ -202,13 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				267915C227B81DFB002D1D22 /* UserCell.swift in Sources */,
 				263C278B27B96A2E00624F00 /* UserViewModel.swift in Sources */,
 				263C278827B96A2200624F00 /* UserCellViewModel.swift in Sources */,
 				263C278527B966D600624F00 /* UserViewController.swift in Sources */,
 				267915BC27B81B4B002D1D22 /* UserService.swift in Sources */,
 				267915B527B6A467002D1D22 /* HTTPRequestHelper.swift in Sources */,
 				2679159827B6A405002D1D22 /* AppDelegate.swift in Sources */,
+				263C279027C2626A00624F00 /* UsersCell.swift in Sources */,
 				2679159A27B6A405002D1D22 /* SceneDelegate.swift in Sources */,
 				267915B927B6ABF8002D1D22 /* Users.swift in Sources */,
 				267915A227B6A405002D1D22 /* MVVM.xcdatamodeld in Sources */,

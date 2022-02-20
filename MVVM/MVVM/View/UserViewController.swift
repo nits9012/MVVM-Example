@@ -11,11 +11,27 @@ class UserViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var viewModel = {
+        UserViewModel()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UserCellTableViewCell.nib, forCellReuseIdentifier: UserCellTableViewCell.identifier)
+        tableView.register(UsersCell.nib, forCellReuseIdentifier: UsersCell.identifier)
+        
+        initViewModel()
+    }
+    
+    func initViewModel(){
+        viewModel.getUsers()
+        
+        viewModel.reloadTableView = { [self] in
+            DispatchQueue.main.async {
+                tableView.reloadData()
+            }
+        }
     }
 }
 
@@ -25,13 +41,16 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return viewModel.userCellViewModels.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: UserCellTableViewCell.identifier) as? UserCellTableViewCell else{
-            fatalError("nib does not exists")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UsersCell.identifier, for: indexPath) as? UsersCell else{
+            fatalError("xib does not exists")
         }
+        let cellViewModel = viewModel.getCellViewModel(at: indexPath)
+        cell.cellViewModel = cellViewModel
         
         return cell
     }

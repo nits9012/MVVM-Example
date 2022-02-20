@@ -12,6 +12,14 @@ class UserViewModel:NSObject{
     private var userService:UserServiceProtocol
     var users = Users()
     
+    var reloadTableView: (() -> Void)?
+    
+    var userCellViewModels = [UserCellViewModel](){
+        didSet{
+            reloadTableView?()
+        }
+    }
+    
     init(userService: UserServiceProtocol = UserService()){
         self.userService = userService
     }
@@ -33,17 +41,19 @@ class UserViewModel:NSObject{
         for user in users {
             userCell.append(createCellModel(user: user))
         }
-        //employeeCellViewModels = vms
+        userCellViewModels = userCell
     }
     
-//    func createCellModel(user: User) -> UserCellViewModel {
-//        let id = user.id
-//        let name = user.employeeName
-//        let email = user.employeeEmail
-//        let gender = user.employeeGender
-//        
-//        return UserCellViewModel(id: id, name: name, email: email, gender: gender)
-//    }
-//    
-
+    func createCellModel(user: User) -> UserCellViewModel {
+        let id = user.id
+        let name = user.employeeName
+        let email = user.employeeEmail
+        let gender = user.employeeGender
+        
+        return UserCellViewModel(id: id, name: name, email: email, gender: gender)
+    }
+    
+    func getCellViewModel(at indexPath: IndexPath) -> UserCellViewModel {
+        return userCellViewModels[indexPath.row]
+    }
 }
