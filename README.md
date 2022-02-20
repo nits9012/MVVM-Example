@@ -29,4 +29,4 @@ Respose :
 {"id":3421,"name":"Bhanumati Mishra","email":"mishra_bhanumati@kerluke.info","gender":"male","status":"active"}]
 ```
 
-<img src="mvvm_output.png" width="450" height="750">
+<img src="mvvm_output.png" width="350" height="850">
