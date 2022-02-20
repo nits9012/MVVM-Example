@@ -12,16 +12,16 @@ typealias Users = [User]
 
 struct User:Decodable{
     var id:Int
-    var employeeEmail:String
-    var employeeGender:String
-    var employeeName:String
-    var employeeStatus:String
+    var userEmail:String
+    var userGender:String
+    var userName:String
+    var userStatus:String
     
     enum CodingKeys:String,CodingKey{
         case id
-        case employeeEmail = "email"
-        case employeeGender = "gender"
-        case employeeName = "name"
-        case employeeStatus = "status"
+        case userEmail = "email"
+        case userGender = "gender"
+        case userName = "name"
+        case userStatus = "status"
     }
 }

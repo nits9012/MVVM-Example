@@ -46,9 +46,9 @@ class UserViewModel:NSObject{
     
     func createCellModel(user: User) -> UserCellViewModel {
         let id = user.id
-        let name = user.employeeName
-        let email = user.employeeEmail
-        let gender = user.employeeGender
+        let name = user.userName
+        let email = user.userEmail
+        let gender = user.userGender
         
         return UserCellViewModel(id: id, name: name, email: email, gender: gender)
     }
