@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2631059E28AB92FD00D2BE02 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2631059D28AB92FD00D2BE02 /* HTTPMethod.swift */; };
+		263105A028AB934C00D2BE02 /* APIEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2631059F28AB934C00D2BE02 /* APIEnviroment.swift */; };
+		263105A228AB93C400D2BE02 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263105A128AB93C400D2BE02 /* APIPath.swift */; };
 		263C278527B966D600624F00 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C278427B966D600624F00 /* UserViewController.swift */; };
 		263C278827B96A2200624F00 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C278727B96A2200624F00 /* UserCellViewModel.swift */; };
 		263C278B27B96A2E00624F00 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C278A27B96A2E00624F00 /* UserViewModel.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2631059D28AB92FD00D2BE02 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		2631059F28AB934C00D2BE02 /* APIEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnviroment.swift; sourceTree = "<group>"; };
+		263105A128AB93C400D2BE02 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
 		263C278427B966D600624F00 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		263C278727B96A2200624F00 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		263C278A27B96A2E00624F00 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -53,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2631059C28AB919200D2BE02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				267915A327B6A40B002D1D22 /* Assets.xcassets */,
+				2679159927B6A405002D1D22 /* SceneDelegate.swift */,
+				2679159727B6A405002D1D22 /* AppDelegate.swift */,
+				267915A027B6A405002D1D22 /* MVVM.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2679158B27B6A405002D1D22 = {
 			isa = PBXGroup;
 			children = (
@@ -72,28 +89,26 @@
 		2679159627B6A405002D1D22 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				267915AF27B6A426002D1D22 /* Helper */,
+				2631059C28AB919200D2BE02 /* Resources */,
+				267915AF27B6A426002D1D22 /* Networking */,
 				267915B027B6A42D002D1D22 /* Services */,
 				267915B227B6A439002D1D22 /* Model */,
 				267915B127B6A434002D1D22 /* View */,
 				267915B327B6A43E002D1D22 /* ViewModel */,
-				2679159727B6A405002D1D22 /* AppDelegate.swift */,
-				2679159927B6A405002D1D22 /* SceneDelegate.swift */,
-				2679159D27B6A405002D1D22 /* Main.storyboard */,
-				267915A327B6A40B002D1D22 /* Assets.xcassets */,
-				267915A527B6A40B002D1D22 /* LaunchScreen.storyboard */,
 				267915A827B6A40B002D1D22 /* Info.plist */,
-				267915A027B6A405002D1D22 /* MVVM.xcdatamodeld */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
 		};
-		267915AF27B6A426002D1D22 /* Helper */ = {
+		267915AF27B6A426002D1D22 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				267915B427B6A467002D1D22 /* HTTPRequestHelper.swift */,
+				2631059D28AB92FD00D2BE02 /* HTTPMethod.swift */,
+				2631059F28AB934C00D2BE02 /* APIEnviroment.swift */,
+				263105A128AB93C400D2BE02 /* APIPath.swift */,
 			);
-			path = Helper;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		267915B027B6A42D002D1D22 /* Services */ = {
@@ -110,6 +125,8 @@
 				267915BE27B81DEA002D1D22 /* UsersCell.xib */,
 				263C278F27C2626A00624F00 /* UsersCell.swift */,
 				263C278427B966D600624F00 /* UserViewController.swift */,
+				2679159D27B6A405002D1D22 /* Main.storyboard */,
+				267915A527B6A40B002D1D22 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,9 +222,12 @@
 				263C278B27B96A2E00624F00 /* UserViewModel.swift in Sources */,
 				263C278827B96A2200624F00 /* UserCellViewModel.swift in Sources */,
 				263C278527B966D600624F00 /* UserViewController.swift in Sources */,
+				2631059E28AB92FD00D2BE02 /* HTTPMethod.swift in Sources */,
 				267915BC27B81B4B002D1D22 /* UserService.swift in Sources */,
 				267915B527B6A467002D1D22 /* HTTPRequestHelper.swift in Sources */,
+				263105A228AB93C400D2BE02 /* APIPath.swift in Sources */,
 				2679159827B6A405002D1D22 /* AppDelegate.swift in Sources */,
+				263105A028AB934C00D2BE02 /* APIEnviroment.swift in Sources */,
 				263C279027C2626A00624F00 /* UsersCell.swift in Sources */,
 				2679159A27B6A405002D1D22 /* SceneDelegate.swift in Sources */,
 				267915B927B6ABF8002D1D22 /* Users.swift in Sources */,

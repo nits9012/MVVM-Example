@@ -12,10 +12,10 @@ typealias Users = [User]
 
 struct User:Decodable{
     var id:Int
-    var userEmail:String
-    var userGender:String
-    var userName:String
-    var userStatus:String
+    var userEmail:String?
+    var userGender:String?
+    var userName:String?
+    var userStatus:String?
     
     enum CodingKeys:String,CodingKey{
         case id

@@ -12,13 +12,22 @@ protocol UserServiceProtocol {
 }
 
 class UserService:UserServiceProtocol{
+    
+    var httpClient: HTTPRequestHelper?
+    
+    init(client: HTTPRequestHelper) {
+        self.httpClient = client
+    }
+    
     func getUsers(completion: @escaping (Bool,Users?,String)->()){
-        HTTPRequestHelper().getRequest(url: "https://gorest.co.in/public/v2/users", params: ["":""], completion: {success,data in
+        let getUserUrlString =  APIPath().users
+        
+        httpClient?.getRequest(url: getUserUrlString, params: ["":""], completion: {success,data in
             if success{
                 do{
                     let users = try JSONDecoder().decode(Users.self, from: data!)
                     completion(true,users, "")
-
+                    
                 }catch let error as NSError{
                     completion(false,nil,"Error while parsing data \(error)")
                 }
